@@ -1,0 +1,108 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    background-image: url('BG.jpg');/* 배경 이미지 설정 */
+    background-size: 150%;/* 배경 이미지를 화면 너비에 맞춤 */
+    background-position: top; /* 배경 이미지를 상단 정렬 */
+    background-repeat: no-repeat; 
+  
+
+}
+h1 {
+    place-self: center; /* 중앙에 정렬합니드아아아아아ㅏ앙ㄱ */
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(228, 228, 228);
+}
+
+h2 {
+    place-self: center;
+    text-align: center;
+    margin-top: 150px; /* h1보다 아래쪽 배치합니도아ㅡ아이아이ㅏ이ㅏ이아ㅣ아이ㅏ이아ㅣㄷ */
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(228, 228, 228);
+}
+
+
+.gallery {
+    display: grid;/* 그리드로 설정 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));/* 자동으로 컬럼설정*/
+    grid-gap: 10px;
+    background-color: rgb(191, 151, 95);
+}
+ /* 모든 이미지 hover하면 어둡+확대임*/
+ .gallery img:hover {
+    filter: brightness(80%);
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all 0.8s ease-in-out;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out;border: 1px solid rgb(183, 0, 255); /* 테두리 */
+    border-radius: 3px; /* 모서리 둥글게 */
+}
+
+.image {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden; /* 부모 요소를 벗어나지 않도록 설정 */
+}
+
+#fieldi {
+    height: 30%;
+    width: auto;
+    top: 33%;
+    left: 2%;
+    cursor: crosshair;
+}
+
+#fieldi:hover {
+    box-shadow: 0 0 10px 10px rgba(255, 153, 0, 0.486);
+}
+
+#fieldii {
+    height: auto;
+    width: 13%;
+    top: 140px;
+    right: 80px;
+    cursor: crosshair;
+}
+
+#fieldii:hover {
+    box-shadow: 0 0 10px 10px rgb(93, 93, 93);
+}
+
+#fieldiii {
+    height: 30%;
+    width: auto;
+    top: 500px;
+    right: 320px;
+    cursor: crosshair;
+}
+
+#fieldiii:hover {
+    box-shadow: 0 0 12px 10px rgba(21, 255, 247, 0.486);
+}
+
+
+
+
+@media screen and (max-width: 400px) {/* 반응형웹, 미디어가 400픽셀 밑이면 변하는 */ 
+    html, body {
+        background-size: auto auto;
+    }
+
+    #fieldiii {
+        right: 80px;
+    }
+   
+    
+}
